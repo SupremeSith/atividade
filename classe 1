@@ -1,0 +1,17 @@
+class Cliente:
+    def __init__(self, nome, cpf, endereco, senha, nascimento):
+        self.nome = nome
+        self.cpf = cpf
+        self.endereco = endereco
+        self.senha = senha
+        self.nascimento = nascimento
+
+
+class Loja:
+    def __init__(self, nome, endereco):
+        self.nome = nome
+        self.endereco = endereco
+
+
+clientes = []
+    
