@@ -1,0 +1,54 @@
+from classe import *
+import os
+
+admins = Admin("joao", 1234)
+
+def main():
+    os.system("clear")
+
+os.system("cls")
+print("[1] - Listar clientes\n[2] - Listar produtos\n[3] - Cadastrar cliente\n[4] - Cadastrar produto\n[5] - Excluir cliente\n[6] - Excluir produto\n[7] - Sair")
+
+opcao = int(input("Digite a opção desejada: "))
+match opcao:
+    case 1:
+        print("Listando clientes...")
+        Admin.listarClientes()
+        os.system("pause")        
+        os.system("cls")
+    case 2:
+        print("Listando produtos...")
+        Admin.listarProdutos()
+        os.system("pause")
+        os.system("cls")
+    case 3:
+        print("Cadastrando cliente...")
+        Admin.cadastrarCliente()
+        print("Cadastrando um carrinho ao cliente...")
+        
+        Cliente.cadastrarCarrinho()
+        print("Carrinho cadastrado com sucesso!")
+        os.system("pause")
+        os.system("cls")
+    case 4:
+        print("Cadastrando produto...")
+        admins.cadastrarProduto()
+        print("Produto cadastrado com sucesso!")
+        os.system("pause")
+        os.system("cls")
+    case 5:
+        print("Excluindo cliente...")
+        Admin.excluirCliente()
+        print("Cliente excluído com sucesso!")
+        os.system("pause")
+        os.system("cls")
+    case 6:
+        print("Excluindo produto...")
+        Admin.excluirProduto()
+        print("Produto excluído com sucesso!")
+        os.system("pause")
+        os.system("cls")
+    case 7:
+        print("Saindo...")
+        os.system("pause")
+        os.system("cls")
